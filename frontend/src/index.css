@@ -12,7 +12,7 @@
 }
 
 .bg-hero {
-    background-image: url('./assets/background/gigiLogo.png');
+    background-image: url('./assets/background/gigiLogo1.png');
     background-size: 43%;
     background-position: calc(100% - 90px) calc(50% + 20px);;
     background-repeat: no-repeat;
