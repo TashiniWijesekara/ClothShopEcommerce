@@ -91,7 +91,7 @@ const ListProduct = () => {
                                                 to={`/editProduct/${product.id}`}
                                                 className="hover:no-underline"
                                             >
-                                                <div className="bg-white-500 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded flex items-center cursor-pointer"
+                                                <div className="bg-white-500 hover:bg-[#c18d5c]  text-black font-bold py-2 px-4 rounded flex items-center cursor-pointer"
                                                      style={{ width: "100px" }}
                                                 >
                                                     <RiEdit2Line className="mr-2" />
