@@ -81,7 +81,7 @@ const AddProduct = () => {
             const productResult = await productResponse.json();
 
             if (productResult.success) {
-                setSuccessMessage("Product Added Successfully");
+                setSuccessMessage("Product Added Successfully !");
                 // Reset the form
                 setProductDetails({
                     name: "",
@@ -93,7 +93,7 @@ const AddProduct = () => {
                 setImage(null);
                 setImagePreview(null);
             } else {
-                throw new Error("Failed to add product");
+                throw new Error("Failed to add product ! ");
             }
         } catch (error: unknown) {
             console.error("Error adding product:", error);
@@ -101,7 +101,7 @@ const AddProduct = () => {
             if (error instanceof Error) {
                 setErrorMessage(error.message);  // ✅ Safe access
             } else {
-                setErrorMessage("An error occurred while adding the product");
+                setErrorMessage("An error occurred while adding the product ! ");
             }
         } finally {
             setIsLoading(false);
@@ -112,12 +112,12 @@ const AddProduct = () => {
     return (
         <div>
             <NavbarAdmin />
-            <div className="flex flex-col lg:flex-row bg-white gap-2">
+            <div className="flex flex-col lg:flex-row bg-white gap-10">
                 <Sidebar />
                 <div className=" box-border bg-white w-full rounded-sm  flex-grow ">
                     {/* Success message */}
                     {successMessage && (
-                        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4 relative">
+                        <div className="bg-white border  text-black px-4 py-3 rounded mb-4 relative">
                             {successMessage}
                             <button
                                 className="absolute top-0 right-0 px-4 py-3"
@@ -130,7 +130,7 @@ const AddProduct = () => {
 
                     {/* Error message */}
                     {errorMessage && (
-                        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4 relative">
+                        <div className="bg-white border border-black text-black px-4 py-3 rounded mb-4 relative">
                             {errorMessage}
                             <button
                                 className="absolute top-0 right-0 px-4 py-3"
@@ -141,7 +141,7 @@ const AddProduct = () => {
                         </div>
                     )}
 
-                    <div className="mb-3 gap-2">
+                    <div className="mb-3 gap-20">
                         <h4 className="bold-22 p-5 uppercase text-[#b57b65]">Add Product</h4>
                         <h4 className="bold-18 pb-2">Product title :</h4>
                         <input
@@ -231,8 +231,8 @@ const AddProduct = () => {
                     <button
                         onClick={addProduct}
                         disabled={isLoading}
-                        className={`px-6 py-2 bg-[#b57b65] text-white rounded-md flex items-center gap-x-2 ${
-                            isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#b57b65]-800'
+                        className={`px-6 py-2 bg-[#c18d5c] text-white rounded-md flex items-center gap-x-2 ${
+                            isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#c18d5c]-800'
                         }`}
                     >
                         {isLoading ? (
