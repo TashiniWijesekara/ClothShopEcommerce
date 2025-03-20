@@ -35,16 +35,16 @@ const Dashboard = () => {
     return (
         <div>
             <NavbarAdmin />
-            <div className='flex flex-col lg:flex-row'>
+            <div className='flex flex-col lg:flex-row bg-white'>
                 <Sidebar />
-                <div className='p-8 box-border bg-white w-full rounded-sm mt-4 lg:m-7 flex-grow'>
-                    <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
-                    <div className="flex gap-4">
-                        <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg">
+                <div className='p-8 box-border bg-white w-full rounded-sm mt-4 lg:m-7 flex-grow '>
+                    <h2 className="text-2xl font-bold mb-4 text-[#69443c]">Dashboard</h2>
+                    <div className="flex gap-4 ">
+                        <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg ">
                             <div className='flex justify-center'>
-                                <FaUsers className="text-3xl mb-2 w-[90px] h-[90px]" />
+                                <FaUsers className="text-3xl mb-2 w-[90px] h-[90px] " />
                             </div>
-                            <h1 className="text-[60px] font-semibold">{counts.users}</h1>
+                            <h1 className="text-[60px] font-semibold ">{counts.users}</h1>
                             <p className="text-[25px] text-gray-600">Members</p>
                         </div>
                         <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg">
