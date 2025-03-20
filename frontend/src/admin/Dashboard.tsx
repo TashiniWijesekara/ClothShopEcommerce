@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { LuShoppingBag , LuShoppingCart } from "react-icons/lu";
 
 const Dashboard = () => {
-    const [counts, setCounts] = useState({products: 0, users: 0});
+    const [counts, setCounts] = useState({products: 0, users: 0 });
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,6 +18,8 @@ const Dashboard = () => {
                 const productsResponse = await fetch('http://localhost:4000/totalProducts');
                 const productsData = await productsResponse.json();
 
+                // const ordersResponse = await fetch('http://localhost:4000/totalOrders');
+                // const ordersData = await ordersResponse.json();
 
                 setCounts({
                     users: usersData.totalUsers,
@@ -42,24 +44,24 @@ const Dashboard = () => {
                     <div className="flex gap-10 ">
                         <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg ">
                             <div className='flex justify-center'>
-                                <FaUsers className="text-3xl mb-2 w-[90px] h-[90px] " />
+                                <FaUsers style={{ color: "#69443c" }} className="text-3xl mb-2 w-[90px] h-[90px] " />
                             </div>
-                            <h1 className="text-[60px] font-semibold ">{counts.users}</h1>
-                            <p className="text-[25px] text-gray-600">Members</p>
+                            <h1 className="flex justify-center text-[60px] text-[#69443c]  font-semibold ">{counts.users}</h1>
+                            <p className="flex justify-center text-[25px] text-[#69443c] text-gray-600">Members</p>
                         </div>
                         <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg">
                             <div className='flex justify-center'>
-                                <FaTshirt className="text-3xl mb-2  w-[90px] h-[90px]" />
+                                <FaTshirt style={{ color: "#69443c" }} className="text-3xl mb-2  w-[90px] h-[90px]" />
                             </div>
-                            <h1 className="text-[60px] font-semibold">{counts.products}</h1>
-                            <p className="text-[25px] text-gray-600">Products</p>
+                            <h1 className="text-[#69443c] flex justify-center text-[60px] font-semibold">{counts.products}</h1>
+                            <p className=" flex justify-center text-[25px] text-[#69443c]">Products</p>
                         </div>
                         <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg">
                             <div className='flex justify-center'>
-                                <LuShoppingCart className="text-3xl mb-2  w-[90px] h-[90px]" />
+                                <LuShoppingCart style={{ color: "#69443c" }} className="text-3xl mb-2  w-[90px] h-[90px]" />
                             </div>
-                            <h1 className="text-[60px] font-semibold">1</h1>
-                            <p className="text-[25px] text-gray-600">Orders</p>
+                            <h1 className=" flex justify-center text-[60px] text-[#69443c] font-semibold">2</h1>
+                            <p className="flex justify-center text-[25px] text-[#69443c]">Orders</p>
                         </div>
                     </div>
                 </div>
