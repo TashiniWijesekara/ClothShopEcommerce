@@ -4,10 +4,18 @@ import { PiShoppingBagOpenFill } from "react-icons/pi";
 import { FaUsers } from "react-icons/fa";
 import { FaClipboardList } from "react-icons/fa";
 import { BiSolidLogOut } from "react-icons/bi";
+import logo from "../assets/logo/LorenzLogo.png";
+
 
 const Sidebar = () => {
     return (
+
         <div className=" bg-[#ddc08a] py-7 flex flex-col items-start w-full bg-white gap-y-5 lg:max-w-60 lg:h-screen lg:justify-start lg:pl-6">
+
+            <div className='flex-none px-3'>
+                <img src={logo} alt="Logo" height={30} width={80}/>
+            </div>
+
             <Link to={"/dashboard"}>
                 <button className="flex items-center gap-2 rounded-md bg-primary h-14 w-48 medium-16 xs:w-44 hover:bg-[#c18d5c] rounded hover:text-light transition duration-200 px-4 mt-4">
                     <AiFillProduct style={{ color: "#69443c" }} className="w-6 h-6"/>
