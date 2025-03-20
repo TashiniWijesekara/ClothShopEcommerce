@@ -25,7 +25,7 @@ if (!fs.existsSync(uploadDir)){
 
 // Database connection
 mongoose.connect(
-    "mongodb+srv://ecommerceCloth:user123@cluster0.xr2ed.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0\n"
+    "mongodb+srv://ecommerceCloth:user123@cluster0.xr2ed.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 )
     .then(() => {
         console.log("MongoDB successfully connected!");
@@ -44,7 +44,7 @@ const storage = multer.diskStorage({
         cb(null, uploadDir);
     },
     filename: (req, file, cb) => {
-        cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
+        cb(null,` ${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     },
 });
 
@@ -366,7 +366,9 @@ app.get("/newCollection", async (req, res) => {
 
 // Popular products
 app.get("/popularProducts", async (req, res) => {
-    let products = await Product.find({ category: "men" });
+    let products = await Product.find({
+        category: { $in: ["men" ,"women", "kid"]}
+    });
     let popularProducts = products.slice(0, 4);
     console.log("Popular products fetched");
     res.send(popularProducts);
