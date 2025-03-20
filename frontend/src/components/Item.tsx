@@ -54,7 +54,7 @@ const Item: React.FC<ItemProps> = ({
                     <span
                         className={"bold-16 bg-[#f1f1f1] ml-1 px-4  rounded-lg py-1"}
                     >
-            <small className={"bold-18 pl-1"}> $ </small>
+            <small className={"bold-18 pl-1"}> LKR </small>
                         {new_price}.00
           </span>
                 </div>

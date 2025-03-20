@@ -54,7 +54,7 @@ const CartItems = () => {
                     <div>
                         <div className="flexBetween py-4">
                             <h4 className="medium-16">Subtotal :</h4>
-                            <h4 className="text-gray-30 font-semibold">${getTotalCartAmount()}</h4>
+                            <h4 className="text-gray-30 font-semibold">LKR {getTotalCartAmount()}</h4>
                         </div>
                         <hr />
                         <div className="flexBetween py-4">
@@ -64,7 +64,7 @@ const CartItems = () => {
                         <hr />
                         <div className="flexBetween py-4">
                             <h4 className="bold-18">Total :</h4>
-                            <h4 className="bold-18">${getTotalCartAmount()}</h4>
+                            <h4 className="bold-18">LKR {getTotalCartAmount()}</h4>
                         </div>
                     </div>
                     <button className="btn_dark_rounded w-44">Checkout</button>
