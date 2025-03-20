@@ -44,7 +44,7 @@ const storage = multer.diskStorage({
         cb(null, uploadDir);
     },
     filename: (req, file, cb) => {
-        cb(null, '${file.fieldname}_${Date.now()}${path.extname(file.originalname)}');
+        cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     },
 });
 
@@ -64,7 +64,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
 
     res.json({
         success: 1,
-        image_url: 'http://localhost:${port}/images/${req.file.filename}',
+        image_url: `http://localhost:${port}/images/${req.file.filename}`,
 });
 });
 
