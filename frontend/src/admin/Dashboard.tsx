@@ -37,8 +37,8 @@ const Dashboard = () => {
             <NavbarAdmin />
             <div className='flex flex-col lg:flex-row bg-white'>
                 <Sidebar />
-                <div className='p-8 box-border bg-white w-full rounded-sm mt-4 lg:m-7 flex-grow '>
-                    <h2 className="text-2xl font-bold mb-4 text-[#69443c]">Dashboard</h2>
+                <div className='p-8 box-border bg-white w-full rounded-sm flex-grow '>
+                    <h2 className="text-2xl font-bold mb-10 text-[#b57b65]">Dashboard</h2>
                     <div className="flex gap-4 ">
                         <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg ">
                             <div className='flex justify-center'>
