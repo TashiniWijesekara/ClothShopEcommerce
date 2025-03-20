@@ -35,11 +35,11 @@ const Dashboard = () => {
     return (
         <div>
             <NavbarAdmin />
-            <div className='flex flex-col lg:flex-row bg-white'>
+            <div className='flex flex-col lg:flex-row  bg-white '>
                 <Sidebar />
                 <div className='p-8 box-border bg-white w-full rounded-sm flex-grow '>
                     <h2 className="text-2xl font-bold mb-10 text-[#b57b65]">Dashboard</h2>
-                    <div className="flex gap-4 ">
+                    <div className="flex gap-10 ">
                         <div className="flex-1 bg-gray-200 p-4 rounded-md shadow-lg ">
                             <div className='flex justify-center'>
                                 <FaUsers className="text-3xl mb-2 w-[90px] h-[90px] " />

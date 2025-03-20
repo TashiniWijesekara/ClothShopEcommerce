@@ -46,11 +46,11 @@ const ListUsers = () => {
     return (
         <div>
             <NavbarAdmin />
-            <div className="flex flex-col lg:flex-row overflow-hidden">
+            <div className="flex flex-col lg:flex-row overflow-hidden bg-white">
                 <Sidebar />
                 <div className=" box-border bg-white w-full rounded-sm mt-4  flex-grow ">
                     <div className=" box-border bg-white rounded-md w-full ">
-                        <h4 className="bold-22 p-5 uppercase">User List</h4>
+                        <h4 className="bold-22 p-5 uppercase text-[#b57b65] ">User List</h4>
                         <div className="max-h-[70vh] max-w-[81vw] overflow-auto text-center shadow-lg">
                             <table className="w-full mx-auto">
                                 <thead className="sticky top-0 bg-white z-10">

@@ -77,9 +77,10 @@ const AddProduct = () => {
     return (
         <div>
             <NavbarAdmin />
-            <div className="flex flex-col lg:flex-row">
+            <div className="flex flex-col lg:flex-row bg-white gap-10">
                 <Sidebar />
-                <div className="p-8 box-border bg-white w-full rounded-sm mt-4 lg:m-7 flex-grow">
+                <div className="p-4 box-border bg-white w-full rounded-sm flex-grow">
+                    <h4 className="bold-22 p-5 uppercase text-[#b57b65]">Add Product</h4>
                     <div className="mb-3">
                         <h4 className="bold-18 pb-2">Product title :</h4>
                         <input
@@ -144,7 +145,7 @@ const AddProduct = () => {
                             className="bg-primary max-w-80 w-full py-3 px-4"
                         />
                     </div>
-                    <button onClick={addProduct} className="btn_dark_rounded mt-4 flexCenter gap-x-1">
+                    <button onClick={addProduct} className=" btn_dark_rounded mt-5 flexCenter gap-x-2 ">
                         <FaPlus /> Add Product
                     </button>
                 </div>
